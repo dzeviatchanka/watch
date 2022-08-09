@@ -1,0 +1,83 @@
+#header {
+    width: 0 auto;
+}
+.clock {
+    position: relative;
+    z-index: 100;
+    width: 600px;
+    height: 600px;
+    opacity: 1;
+    animation: clock 1s linear 3 30s;
+}
+@keyframes clock {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% { 
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.clock>img {
+    width: 600px;
+    height: 600px;
+}
+.hour {
+    position: absolute;
+    top: 0px;
+    left: 45%;
+    width: 30px;
+    height: auto;
+    transform: translate(50%, 0) rotate(0);
+    transform-origin: 50% 50%;
+    animation: hour 43200s infinite steps(43200);
+}
+@keyframes hour {
+    0% {
+        transform: translate(50%, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(50%, 0) rotate(360deg);
+    }
+}
+.min {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 30px;
+    height: auto;
+    transform: translate(50%, 0) rotate(0);
+    transform-origin: 50% 50%;
+    animation: min 3600s infinite steps(60);
+}
+@keyframes min {
+    0% {
+        transform: translate(50%, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(50%, 0) rotate(360deg);
+    }
+}
+.sec {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 30px;
+    height: auto;
+    transform: translate(50%, 0) rotate(0);
+    transform-origin: 50% 50%;
+    animation: sec 60s infinite steps(60);
+}
+@keyframes sec {
+    0% {
+        transform: translate(50%, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(50%, 0) rotate(360deg);
+    }
+}
